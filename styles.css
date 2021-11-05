@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+  /* Text */
+  --very-dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Background */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  /* Typo */
+  --default-font-size: 12px;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--soft-violet),
+    var(--soft-blue)
+  );
+  height: 100vh;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+}
+.container {
+  background-color: #fff;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  max-width: 90%;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 32px rgba(51, 51, 51, 0.5);
+}
+.col-img {
+  position: relative;
+  width: 50%;
+  background-image: url('./images/bg-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card-img {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-img-box {
+  position: absolute;
+  top: 53%;
+  left: -3%;
+}
+
+.col-contents {
+  width: 50%;
+  padding: 2.5rem;
+}
+.col-contents > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.accordion-container {
+  margin-right: 1rem;
+}
+
+.divider {
+  margin-top: 1rem;
+  margin-bottom: 0.9rem;
+}
+.accordion-arrow {
+  margin-top: 10px;
+  float: right;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.accordion-title {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-right: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.accordion-title:hover {
+  color: var(--soft-red);
+  transition: 0.2s;
+}
+.accordion-content {
+  display: none;
+}
+.accordion-description {
+  font-size: var(--default-font-size);
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  margin-top: 0.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.accordion-arrow {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+.accordion-open .accordion-title {
+  font-weight: 600;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 400px;
+    height: 80vh;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .col-img {
+    position: relative;
+    width: 50%;
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .card-img {
+    width: 150%;
+    bottom: -13px;
+    right: -43px;
+    position: absolute;
+  }
+  .card-img-box {
+    left: -33%;
+    height: 7rem;
+    top: -130px;
+  }
+  .col-contents {
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    width: 90%;
+    text-align: center;
+  }
+  .col-contents > h1 {
+    margin-bottom: 1rem;
+  }
+  .accordion-container {
+    padding: 0;
+    margin: 0;
+  }
+  .accordion-title {
+    margin: 0;
+    letter-spacing: 0.3px;
+    font-size: 15px;
+  }
+}
+/* Tablet */
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    width: 400px;
+    height: 80vh;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .col-img {
+    position: relative;
+    width: 50%;
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .card-img {
+    width: 110%;
+    bottom: -92px;
+    right: -10px;
+    position: absolute;
+  }
+  .card-img-box {
+    left: -16%;
+    height: 7rem;
+    top: -51px;
+  }
+  .col-contents {
+    padding: 3px;
+    margin: 70px 0px 2px;
+    width: 90%;
+    text-align: center;
+  }
+  .col-contents > h1 {
+    margin-bottom: 1rem;
+  }
+  .accordion-container {
+    padding: 0;
+    margin: 0;
+  }
+  .accordion-title {
+    margin: 0;
+    letter-spacing: 0.3px;
+    font-size: 15px;
+  }
+}
